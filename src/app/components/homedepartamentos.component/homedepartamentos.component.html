@@ -1,0 +1,30 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Localidad</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(dept of departamentos; track dept){
+        <tr>
+          <td>{{dept.numero}}</td>
+          <td>{{dept.nombre}}</td>
+          <td>{{dept.localidad}}</td>
+          <td>
+            <a [routerLink]="['/details', dept.numero, dept.nombre, dept.localidad]" class="btn btn-dark">
+              Details
+            </a>
+            <!-- <a [routerLink]="['/details/'+dept.numero+'/'+dept.nombre+'/'+dept.localidad]" class="btn btn-dark">
+              Details
+            </a> -->
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>

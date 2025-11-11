@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit)="crearDept()" #formCreate="ngForm">
+    <label>ID</label>
+    <input type="number" name="cajaid" #cajaid="ngModel" [(ngModel)]="departamento.numero">
+    <label>Nombre</label>
+    <input type="text" name="cajanombre" #cajaid="ngModel" [(ngModel)]="departamento.nombre">
+    <label>Localidad</label>
+    <input type="text" name="cajalocalidad" #cajaid="ngModel" [(ngModel)]="departamento.localidad">
+    <button class="btn btn-warning">Crear</button>
+  </form>
+</div>
