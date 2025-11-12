@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepartamentos } from './services/serviceDepartamentos';
 import { DetailsdepartamentoComponent } from './components/detailsdepartamento.component/detailsdepartamento.component';
+import { EditdepartamentoComponent } from './components/editdepartamento.component/editdepartamento.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailsdepartamentoComponent } from './components/detailsdepartamento.c
     CreatedepartamentoComponent,
     UpdatedepartamentoComponent,
     MenuComponent,
-    DetailsdepartamentoComponent
+    DetailsdepartamentoComponent,
+    EditdepartamentoComponent
   ],
   imports: [
     BrowserModule,

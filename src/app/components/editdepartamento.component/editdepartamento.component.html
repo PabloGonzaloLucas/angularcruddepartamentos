@@ -1,0 +1,16 @@
+<a [routerLink]="['/']">Back to home</a>
+<div>
+
+@if(departamentoNuevo){
+
+  <form (ngSubmit)="editDept()" #formEdit="ngForm">
+    <label>ID</label>
+    <input type="number" name="cajaid" #cajaid="ngModel" value={{departamentoNuevo.numero}} [(ngModel)]="departamentoNuevo.numero" disabled>
+    <label>Nombre</label>
+    <input type="text" name="cajanombre" #cajaid="ngModel" value={{departamentoNuevo.nombre}} [(ngModel)]="departamentoNuevo.nombre">
+    <label>Localidad</label>
+    <input type="text" name="cajalocalidad" #cajaid="ngModel" value={{departamentoNuevo.numero}} [(ngModel)]="departamentoNuevo.localidad">
+    <button class="btn btn-warning">Crear</button>
+  </form>
+}
+</div>

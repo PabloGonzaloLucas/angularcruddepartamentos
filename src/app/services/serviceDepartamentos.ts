@@ -24,4 +24,24 @@ export class ServiceDepartamentos{
     let url = environment.urlDepartamento + request;
     return this._http.get<Array<Departamento>>(url)
   }
+
+  findDepartamento(idDepartamento: number): Observable<Departamento> {
+    let request = "api/departamentos/" + idDepartamento;
+    let url = environment.urlDepartamento + request;
+    return this._http.get<Departamento>(url);
+  }
+
+  updateDepartamento(departamento: Departamento): Observable<any>{
+    let json = JSON.stringify(departamento);
+    let header = new HttpHeaders().set("Content-type","application/json");
+    let request = "api/departamentos";
+    let url = environment.urlDepartamento +request
+    return this._http.put(url, departamento, {headers: header})
+  }
+
+  deleteDepartamento(idDepartamento: number): Observable<any>{
+    let request= "api/departamentos/"+idDepartamento;
+    let url = environment.urlDepartamento + request;
+    return this._http.delete(url);
+  }
 }

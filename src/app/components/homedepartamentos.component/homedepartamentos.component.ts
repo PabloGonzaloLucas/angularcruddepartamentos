@@ -13,9 +13,20 @@ export class HomedepartamentosComponent implements OnInit{
 
   }
 
-  ngOnInit(): void {
+  loadDepartamentos():void{
     this._service.getDepartamentos().subscribe(res=>{
       this.departamentos = res
+    })
+  }
+
+  ngOnInit(): void {
+    this.loadDepartamentos()
+  }
+
+  deleteDepartamento(id:number): void{
+    this._service.deleteDepartamento(id).subscribe(res => {
+      console.log("delete");
+      this.loadDepartamentos();
     })
   }
 
